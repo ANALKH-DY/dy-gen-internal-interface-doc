@@ -1,0 +1,190 @@
+[
+  {
+    "name": "GetListByFilter",
+    "intro": "根据条件取得列表",
+    "args": [
+      {
+        "name": "dictProps",
+        "type": "dict",
+        "explain": "条件字典"
+      },
+      {
+        "name": "nPage",
+        "type": "int",
+        "explain": "页码",
+        "default": "1"
+      },
+      {
+        "name": "nSize",
+        "type": "int",
+        "explain": "每页大小",
+        "default": "10"
+      }
+    ],
+    "returns": [
+      {
+        "name": "page",
+        "type": "int",
+        "explain": "页码"
+      },
+      {
+        "name": "size",
+        "type": "int",
+        "explain": "每页大小"
+      },
+      {
+        "name": "total",
+        "type": "int",
+        "explain": "总共多少条数据"
+      },
+      {
+        "name": "list",
+        "type": "list",
+        "explain": "数据列表"
+      },
+      {
+        "name": "lstMissile",
+        "type": "list",
+        "explain": "弹药列表"
+      }
+    ]
+  },
+  {
+    "name": "GetAll",
+    "intro": "得到全部ai目标",
+    "args": [
+      {
+        "name": "dictProps",
+        "type": "dict",
+        "explain": "条件字典"
+      },
+      {
+        "name": "nPage",
+        "type": "int",
+        "explain": "页码",
+        "default": "1"
+      },
+      {
+        "name": "nSize",
+        "type": "int",
+        "explain": "每页大小",
+        "default": "10"
+      }
+    ],
+    "returns": [
+      {
+        "name": "lstMessage",
+        "type": "list",
+        "explain": "全部ai目标对象"
+      }
+    ]
+  },
+  {
+    "name": "Get",
+    "intro": "取得某项",
+    "args": [
+      {
+        "name": "nID",
+        "type": "int",
+        "explain": "主键id"
+      }
+    ],
+    "returns": [
+      {
+        "name": "entity",
+        "type": "object",
+        "explain": "取得的项"
+      }
+    ]
+  },
+  {
+    "name": "Add",
+    "intro": "添加一个ai目标",
+    "args": [
+      {
+        "name": "nID",
+        "type": "int",
+        "explain": "主键id"
+      }
+    ],
+    "returns": [
+      {
+        "name": "res",
+        "type": "int",
+        "explain": "新项的id"
+      }
+    ]
+  },
+  {
+    "name": "Delete",
+    "intro": "删除某项",
+    "args": [
+      {
+        "name": "nID",
+        "type": "int",
+        "explain": "主键id"
+      }
+    ],
+    "returns": [
+      {
+        "name": "res",
+        "type": "bool",
+        "explain": "true表示删除成功，false表示删除失败"
+      }
+    ]
+  },
+  {
+    "name": "DeleteMulti",
+    "intro": "删除多项",
+    "args": [
+      {
+        "name": "ids",
+        "type": "str",
+        "explain": "逗号分隔id组成的字符串"
+      }
+    ],
+    "returns": [
+      {
+        "name": "nCount",
+        "type": "int",
+        "explain": "受影响的行数"
+      }
+    ]
+  },
+  {
+    "name": "Update",
+    "intro": "更新某项",
+    "args": [
+      {
+        "name": "ids",
+        "type": "str",
+        "explain": "逗号分隔id组成的字符串"
+      }
+    ],
+    "returns": [
+      {
+        "name": "res",
+        "type": "bool",
+        "explain": "true表示更新成功，false表示更新失败"
+      }
+    ]
+  },
+  {
+    "name": "__str__",
+    "intro": "toString方法",
+    "args": [
+      {
+        "name": "ids",
+        "type": "str",
+        "explain": "逗号分隔id组成的字符串"
+      }
+    ],
+    "returns": [
+      {
+        "name": "str",
+        "type": "str",
+        "explain": "对象的对应字符串"
+      }
+    ]
+  }
+]
